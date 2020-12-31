@@ -74,8 +74,6 @@ background-size: 100%
 
 .center[**60 second task**]
 
-<br>
-
 What do you think of when you hear the phrase "split-apply-combine"?
 
 ]
@@ -404,6 +402,8 @@ Today, you have:
 * **Applied** your knowledge to some example problems concerning penguins
 
 --
+
+<br><br>
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4[
 
