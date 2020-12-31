@@ -1,0 +1,12 @@
+name: formative_assessment
+title: formative_assessment
+username:
+account: harryfish
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3429860
+bundleId: 4035070
+url: https://harryfish.shinyapps.io/formative_assessment/
+when: 1609155656.09645
+asMultiple: FALSE
+asStatic: FALSE

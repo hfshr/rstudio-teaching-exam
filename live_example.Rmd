@@ -1,0 +1,98 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup}
+library(tidyverse)
+library(palmerpenguins)
+
+penguins <- penguins
+```
+
+
+# The problem
+
+Our summary table contains NA's, this is not what we want!
+
+```{r}
+penguins %>% 
+  group_by(species) %>% 
+  summarise(count = n(),
+            mean_bill_length = mean(bill_length_mm))
+```
+
+
+# Dealing with NA's
+
+Typically a good idea to check for NA's before any further analysis.
+
+```{r}
+penguins %>% 
+```
+
+# Example 1: Dropping NAs
+
+One method we can use to to drop NAs completely from the data, however this may lead to other problems...
+
+```{r}
+penguins %>% 
+```
+
+
+# Example 2: Ignoring NA's
+
+An alterative solution is to ignore NAs for our summary calculations
+
+```{r}
+penguins %>% 
+```
+
+
+
+# Solutions
+
+
+## The problem
+
+```{r}
+penguins %>% 
+  group_by(species) %>% 
+  summarise(count = n(),
+            mean_bill_length = mean(bill_length_mm))
+```
+
+
+## Dealing with NA's
+
+Typically a good idea to check for NA's before any further analysis.
+
+```{r}
+penguins %>% 
+  filter(is.na(bill_length_mm))
+```
+
+## Example 1: Dropping NAs
+
+One method we can use to to drop NAs completely from the data, however this leads to a problem...
+
+```{r}
+penguins %>% 
+  drop_na(bill_length_mm) %>% 
+  group_by(species) %>% 
+  summarise(count = n(),
+            mean_bill_length = mean(bill_length_mm))
+```
+
+
+## Example 2: Ignoring NA's
+
+An alternative solution is to ignore NAs for our summary calculations
+
+```{r}
+penguins %>% 
+  group_by(species) %>% 
+  summarise(count = n(),
+            mean_bill_length = mean(bill_length_mm, na.rm = TRUE))
+```
+

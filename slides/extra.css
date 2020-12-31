@@ -1,0 +1,18 @@
+a {
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    color: #268bd2;
+    transition: background-size .3s;
+}
+
+ a:hover, a:focus {
+    background-size: 100% 2px;
+}
+
+pre {
+  max-width: 100%;
+  overflow-x: scroll;
+}

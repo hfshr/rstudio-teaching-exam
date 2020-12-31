@@ -1,0 +1,119 @@
+---
+title: "Tutorial"
+output: 
+  learnr::tutorial:
+    theme: flatly
+runtime: shiny_prerendered
+---
+
+<style type="text/css">
+.ace_editor {
+    font: 16px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+    direction: ltr;
+    text-align: left;
+}
+.topicsFooter .resetButton {
+    font-size: 1em;
+}
+</style>
+
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE)
+library(tidyverse)
+library(palmerpenguins)
+```
+
+
+# The data
+
+Our data includes details about different penguin species, including where they live and physical characteristics such as bill length, bill depth, flipper length and body mass.
+
+```{r}
+glimpse(penguins)
+```
+
+# Quick quiz
+
+```{r quiz}
+quiz(
+  question("Which answer is the correct way to use `group_by()` and `summarise()`?",
+    answer("group_by() + summarise()"),
+    answer("summarise() %>% group_by()"),
+    answer("group_by() %>% summarise()", correct = TRUE),
+    answer("summarise(group_by())")
+  )
+)
+```
+
+# Fill in the blanks 1
+
+Complete the code to find the **median** (`median()`) bill length for each island `island`. Your solution output should look like this:
+
+```{r echo = FALSE, message=FALSE}
+penguins %>% 
+  group_by(island) %>% 
+  summarise(median_bill_length = median(bill_length_mm, na.rm = TRUE))
+```
+
+```{r faded-example-1, exercise = TRUE, exercise.lines = 5}
+penguins %>%  
+  group_by(___) %>% 
+  summarise(median_bill_length = ___(bill_length_mm, ___))
+```
+
+
+```{r faded-example-1-solution}
+penguins %>% 
+  group_by(island) %>% 
+  summarise(median_bill_length = median(bill_length_mm, na.rm = TRUE))
+```
+
+If needed, you can try out your solution with the data in the chunk below:
+
+```{r penguins-practice, exercise = TRUE, exercise.lines = 5}
+penguins %>% 
+```
+
+# Fill in the blanks 2
+
+You are interested in finding the maximum (`max()`) and minimum (`min()`) flipper length (`flipper_length_mm`) for both males and females (`sex`) on each island (`island`). Complete the code chunk below to get the following output:
+
+```{r echo = FALSE, message=FALSE}
+penguins %>% 
+  group_by(island, sex) %>% 
+  summarise(max_flipper_length = max(flipper_length_mm, na.rm = TRUE),
+            min_flipper_length = min(flipper_length_mm, na.rm = TRUE))
+```
+
+<br>
+
+**Hint 1:** You can group by more than one variable in the data in the following way: `data %>% group_by(group1, group2)`.
+
+**Hint 2:** `na.rm = TRUE` can also be used in `min()` and `max()` .
+
+<br>
+
+```{r faded-example-2, exercise = TRUE, exercise.lines = 5}
+penguins %>% 
+  group_by(___, ___) %>% 
+  summarise(___)
+```
+
+
+```{r faded-example-2-solution}
+penguins %>% 
+  group_by(island, sex) %>% 
+  summarise(max_flipper_length = max(flipper_length_mm, na.rm = TRUE),
+            min_flipper_length = min(flipper_length_mm, na.rm = TRUE))
+
+```
+
+If needed, you can try out your solution with the data in the chunk below:
+
+```{r penguins-practice2, exercise = TRUE, exercise.lines = 5}
+penguins %>% 
+
+```
+
