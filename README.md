@@ -7,11 +7,11 @@ This repository contains the materials I used for the RStudio teaching exam.
 
 **Peter pivot table**
 
-Peter is an Excel user who often summarises data using pivot tables. He has seen some of his colleagues using R and wants to try it out for himself. He was been able to work through a few online tutorials for getting started with R, but some things are still not making sense, and he gets frustrated when things do work out as he expects. Peter needs to build some confidence in his abilities and see tangible progress with his learning in order to stay motivated.
+Peter is an Excel user who often summarises data using pivot tables. He has seen some of his colleagues using R and wants to try it out for himself. He was been able to work through a few online tutorials for getting started with R, but some things are still not making sense, and he gets frustrated when things do work out as he expects. Peter needs to build some confidence in his abilities with R and see tangible progress with his learning in order to stay motivated.
 
 ## Materials
 
-* [Slides](slides/index.html)
+* [Slides code](slides/index.html) | [Slides published](https://split-apply-combine-with-dplyr.netlify.app)
 
 * [Live demo workbook](live_example.Rmd)
 
