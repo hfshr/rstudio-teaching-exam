@@ -5,10 +5,15 @@
     <meta charset="utf-8" />
     <meta name="author" content="Harry Fisher" />
     <script src="index_files/header-attrs-2.6.4/header-attrs.js"></script>
+    <script src="index_files/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="index_files/shareon-1.4.1/shareon.min.css" rel="stylesheet" />
+    <script src="index_files/shareon-1.4.1/shareon.min.js"></script>
+    <link href="index_files/xaringanExtra-shareagain-0.2.4/shareagain.css" rel="stylesheet" />
+    <script src="index_files/xaringanExtra-shareagain-0.2.4/shareagain.js"></script>
     <link href="index_files/panelset-0.2.4/panelset.css" rel="stylesheet" />
     <script src="index_files/panelset-0.2.4/panelset.js"></script>
     <link href="index_files/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x86ea72fbdaf4352b73f3f8520c145fd","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"a5f1f54bd6e642b3bbf3983d2837ac7f","expires":1}</script>
     <script src="index_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="index_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="index_files/editable-0.2.4/editable.css" rel="stylesheet" />
@@ -51,7 +56,7 @@ background-size: 100%
 
 &lt;br&gt;
 
-* **Learn:** How to do split-apply-combine using `group_by()` and `summarise()`.
+* **Learn:** How to do split-apply-combine using `dplyr` functions `group_by()` and `summarise()`.
 
 --
 
@@ -133,7 +138,7 @@ What is split-apply-combine?
 
 What is split-apply-combine?
 
-- **Split** the data into groups based on some criteria.
+- **Split** the data into different groups.
 
 - **Apply** a function to each group independently.
 
@@ -155,18 +160,7 @@ What is split-apply-combine?
 
 ---
 
-### Concept map
-
---
-
-&lt;img src="img/grouby_summarise.png" width="935" /&gt;
-
-
-.footnote[Source: [rstudio/concept-maps](https://github.com/rstudio/concept-maps#group_by-and-summarize)]
-
----
-
-### Split-apply-combine with `dplyr`
+### Split-apply-combine with the `dplyr` package
 
 --
 
@@ -200,7 +194,7 @@ What is split-apply-combine?
 
 ---
 
-### Split-apply-combine with `dplyr`
+### Split-apply-combine with the `dplyr` package
 
 * **Split**: `group_by()`
 
@@ -260,9 +254,9 @@ glimpse(penguins)
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4[
 
-Our data contain three types of penguins. 
+Our data contain three species of penguins. 
 
-**Goal:** We want to gather some summary statistics about the different types.
+**Goal:** We want to gather some summary statistics about the different species.
 
 ]
 
@@ -272,13 +266,15 @@ Our data contain three types of penguins.
 
 .panel[.panel-name[Example #1]
 
-Count the number of penguins in each species
+Count the number of penguins in each species...
 
 
 
 
 &lt;code class ='r hljs remark-code'&gt;penguins %&gt;% &lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;span style="color:red"&gt;group_by&lt;/span&gt;(species) %&gt;% &lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;span style="color:red"&gt;summarise&lt;/span&gt;(count = &lt;span style="color:purple"&gt;n&lt;/span&gt;())&lt;/code&gt;
 
+
+What do you expect the output to look like?
 ]
 
 .panel[.panel-name[Output #1]
@@ -297,7 +293,7 @@ Count the number of penguins in each species
 
 .panel[.panel-name[Example #2]
 
-Also add a column for the mean bill length
+Also add a column for the mean bill length...
 
 
 

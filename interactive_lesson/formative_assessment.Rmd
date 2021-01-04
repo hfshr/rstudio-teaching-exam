@@ -31,7 +31,7 @@ library(palmerpenguins)
 Our data includes details about different penguin species, including where they live and physical characteristics such as bill length, bill depth, flipper length and body mass.
 
 ```{r}
-glimpse(penguins)
+head(penguins)
 ```
 
 # Quick quiz
@@ -98,7 +98,8 @@ penguins %>%
 ```{r faded-example-2, exercise = TRUE, exercise.lines = 5}
 penguins %>% 
   group_by(___, ___) %>% 
-  summarise(___)
+  summarise(max_flipper_length = ___,
+            min_flipper_length = ___)
 ```
 
 

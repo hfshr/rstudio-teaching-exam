@@ -20,7 +20,7 @@ style_solarized_light(link_color = "#268bd2")
 ```
 
 ```{r share-again, echo=FALSE}
-#xaringanExtra::use_share_again()
+xaringanExtra::use_share_again()
 xaringanExtra::use_panelset()
 xaringanExtra::use_tachyons()
 xaringanExtra::use_editable(expires = 1)
@@ -56,7 +56,7 @@ background-size: 100%
 
 <br>
 
-* **Learn:** How to do split-apply-combine using `group_by()` and `summarise()`.
+* **Learn:** How to do split-apply-combine using `dplyr` functions `group_by()` and `summarise()`.
 
 --
 
@@ -142,7 +142,7 @@ knitr::include_graphics("img/example_half.png")
 
 What is split-apply-combine?
 
-- **Split** the data into groups based on some criteria.
+- **Split** the data into different groups.
 
 - **Apply** a function to each group independently.
 
@@ -166,20 +166,7 @@ knitr::include_graphics("img/example_full.png")
 
 ---
 
-### Concept map
-
---
-
-```{r}
-knitr::include_graphics("img/grouby_summarise.png")
-```
-
-
-.footnote[Source: [rstudio/concept-maps](https://github.com/rstudio/concept-maps#group_by-and-summarize)]
-
----
-
-### Split-apply-combine with `dplyr`
+### Split-apply-combine with the `dplyr` package
 
 --
 
@@ -213,7 +200,7 @@ knitr::include_graphics("img/grouby_summarise.png")
 
 ---
 
-### Split-apply-combine with `dplyr`
+### Split-apply-combine with the `dplyr` package
 
 * **Split**: `group_by()`
 
@@ -259,9 +246,9 @@ glimpse(penguins)
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4[
 
-Our data contain three types of penguins. 
+Our data contain three species of penguins. 
 
-**Goal:** We want to gather some summary statistics about the different types.
+**Goal:** We want to gather some summary statistics about the different species.
 
 ]
 
@@ -271,7 +258,7 @@ Our data contain three types of penguins.
 
 .panel[.panel-name[Example #1]
 
-Count the number of penguins in each species
+Count the number of penguins in each species...
 
 ```{r simple-example, include=FALSE}
 penguins %>% 
@@ -286,6 +273,8 @@ decorate("simple-example", eval = FALSE) %>%
   flair_funs(color = "purple")
 ```
 
+
+What do you expect the output to look like?
 ]
 
 .panel[.panel-name[Output #1]
@@ -297,7 +286,7 @@ decorate("simple-example", eval = FALSE) %>%
 
 .panel[.panel-name[Example #2]
 
-Also add a column for the mean bill length
+Also add a column for the mean bill length...
 
 ```{r simple-example2, echo = FALSE, eval=FALSE}
 penguins %>% 
