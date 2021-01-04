@@ -20,3 +20,5 @@ Peter is an Excel user who often summarises data using pivot tables. He has seen
 
 
 ![](slides/img/grouby_summarise.png)
+
+[Source: [rstudio/concept-maps](https://github.com/rstudio/concept-maps#group_by-and-summarize)]
