@@ -42,7 +42,7 @@ penguins %>%
 
 # Example 2: Ignoring NA's
 
-An alterative solution is to ignore NAs for our summary calculations
+An alternative solution is to ignore NAs for our summary calculations
 
 ```{r}
 penguins %>% 

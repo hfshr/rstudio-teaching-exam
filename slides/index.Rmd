@@ -380,7 +380,7 @@ Today, you have:
 
 --
 
-* **Reviewed** the split-apply-combine workflow for summarising data
+* **Reviewed** the split-apply-combine workflow for summarising data.
 
 --
 
@@ -388,7 +388,7 @@ Today, you have:
 
 --
 
-* **Applied** your knowledge to some example problems concerning penguins
+* **Applied** your knowledge to some example problems concerning penguins.
 
 --
 

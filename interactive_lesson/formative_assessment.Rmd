@@ -49,7 +49,7 @@ quiz(
 
 # Fill in the blanks 1
 
-Complete the code to find the **median** (`median()`) bill length for each island `island`. Your solution output should look like this:
+Complete the code to find the **median** (`median()`) bill length for each island (`island`). Your solution output should look like this:
 
 ```{r echo = FALSE, message=FALSE}
 penguins %>% 
