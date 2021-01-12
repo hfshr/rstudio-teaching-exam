@@ -33,7 +33,7 @@ penguins %>%
 
 # Example 1: Dropping NAs
 
-One method we can use to to drop NAs completely from the data, however this may lead to other problems...
+One method we can use is to drop NAs completely from the data, however this may lead to other problems...
 
 ```{r}
 penguins %>% 
@@ -45,7 +45,7 @@ penguins %>%
 An alternative solution is to ignore NAs for our summary calculations
 
 ```{r}
-penguins %>% 
+penguins 
 ```
 
 
@@ -74,7 +74,7 @@ penguins %>%
 
 ## Example 1: Dropping NAs
 
-One method we can use to to drop NAs completely from the data, however this leads to a problem...
+One method we can use is to drop NAs completely from the data, however this leads to a problem...
 
 ```{r}
 penguins %>% 
