@@ -29,4 +29,4 @@ Peter is an Excel user who often summarises data using pivot tables. He has seen
 
 <br>
 
-![](certificate.png){ width=75%}
+![](certificate.png)
